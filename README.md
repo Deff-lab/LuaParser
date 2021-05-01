@@ -38,5 +38,20 @@ you get **LuaValue** with architecture:
         - family
           - value: 'Guys'
 
+## Updates
+
+Added parsing of functions written as values
+```
+{
+  integration = spawner_integration(),
+  result_units = (function()
+                     local res = {}
+                     res[1] = {"small-biter", {{0.0, 0.3}, {0.35, 0}}}
+                     return res
+                   end)(),
+	spawning_cooldown = {360, 150},
+}
+```
+
 ## Dependence
-.net framework 4.7.2 **or** you can just copy **LuaParser.cs**
+.net framework 4.7.2 **or**
